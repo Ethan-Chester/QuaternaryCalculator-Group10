@@ -12,6 +12,7 @@ class QuaternaryCalculationTest {
 
     @Test
     void squareRoot() {
+        assertEquals(2, QuaternaryCalculation.squareRoot(4));
     }
 
     @Test
@@ -19,3 +20,4 @@ class QuaternaryCalculationTest {
         assertEquals(4, QuaternaryCalculation.power(2, 2));
     }
 }
+
