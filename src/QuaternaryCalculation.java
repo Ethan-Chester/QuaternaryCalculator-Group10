@@ -2,12 +2,12 @@ public class QuaternaryCalculation {
     public static void main(String[] args){
         // + ADD, - SUBTRACT, * MULTIPLY, / DIVIDE, ^ SQ, & SQRT
 
-        String operator = args[1];
+
 
         String number1 = args[0];
+        String operator = args[1];
         String number2 = args[2];
 
-        StringBuilder stringBuilder = new StringBuilder();
 
         int base10Int1 = 0;
         int base10Int2 = 0;
