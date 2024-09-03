@@ -5,6 +5,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuaternaryCalculationTest {
+    @Test
+    void tenToFourShouldReturnCorrectAnswers() {
+        assertEquals(2, QuaternaryCalculation.tentofour( 2));
+        assertEquals(33, QuaternaryCalculation.tentofour(15));
+        assertEquals(1210, QuaternaryCalculation.tentofour(100));
+        assertEquals(33220, QuaternaryCalculation.tentofour(1000));
+        assertEquals(22, QuaternaryCalculation.tentofour(10));
+
+    }
 
     @Test
     void squareRootShouldReturnCorrectAnswer() {
