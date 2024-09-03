@@ -7,6 +7,7 @@ public class QuaternaryCalculation {
         String number1 = args[0];
         String number2 = args[2];
 
+        StringBuilder stringBuilder = new StringBuilder();
 
         int base10Int1 = 0;
         int base10Int2 = 0;
@@ -40,24 +41,30 @@ public class QuaternaryCalculation {
             switch (operator) {
                 case "+":
                     System.out.println(base10Int1+base10Int2);
+                    System.out.println(tentofour(base10Int1+base10Int2));
                     //return base10 and base4 in each switch case using base4 conversion function
                     break;
                 case "-":
                     System.out.println(base10Int1-base10Int2);
+                    System.out.println(tentofour(base10Int1-base10Int2));
                     break;
                 case "*":
                     System.out.println(base10Int1*base10Int2);
+                    System.out.println(tentofour(base10Int1*base10Int2));
                     break;
                 case "/":
                     System.out.println(base10Int1/base10Int2);
+                    System.out.println(tentofour(base10Int1/base10Int2));
                     break;
                 case "^":
 //                  Squared
                     System.out.println(power(base10Int1, 2));
+                    System.out.println(tentofour(power(base10Int1, 2)));
                     break;
                 case "&":
-//                  Square Root
+//                  Square Roots
                     System.out.println(squareRoot(base10Int1));
+                    System.out.println(tentofour(squareRoot(base10Int1)));
                     break;
                 default:
                     // Return Type Error (Enter a valid operator)
@@ -69,15 +76,35 @@ public class QuaternaryCalculation {
 
     //add Base10 to Base4 Conversion Function
 
-    public static int squareRoot(int base){
-        return (int) Math.round(Math.sqrt(base));
+
+    public static int tentofour(int number){
+        StringBuilder stringBuilder = new StringBuilder();
+        while(number > 0){
+            int remainder = number % 4;
+            stringBuilder.append(remainder);
+            number = number/4;
+        }
+        String base4str = stringBuilder.toString();
+        String newbase4str = "";
+        for (int i=0; i<base4str.length(); i++)
+        {
+            char ch = base4str.charAt(i);
+            newbase4str = ch + newbase4str;
+
+        }
+        return Integer.parseInt(newbase4str);
+
     }
 
-    public static int power(int base, int exponent) {
+    public static int squareRoot(int number){
+        return (int) Math.round(Math.sqrt(number));
+    }
+
+    public static int power(int number, int exponent) {
         if (exponent == 0) {
             return 1;
         } else {
-            return base * power(base, exponent - 1);
+            return number * power(number, exponent - 1);
         }
     }
 }
