@@ -1,3 +1,5 @@
+package main;
+
 public class QuaternaryCalculation {
     public static void main(String[] args){
         // + ADD, - SUBTRACT, * MULTIPLY, / DIVIDE, ^ SQ, & SQRT
