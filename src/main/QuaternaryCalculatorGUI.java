@@ -4,12 +4,12 @@ package main;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class QuaternaryCalculator {
+public class QuaternaryCalculatorGUI {
     private JFrame frame;
     private JTextField display;
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new QuaternaryCalculator().createAndShowGUI());
+        SwingUtilities.invokeLater(() -> new QuaternaryCalculatorGUI().createAndShowGUI());
     }
 
     private void createAndShowGUI() {
@@ -40,18 +40,13 @@ public class QuaternaryCalculator {
         String buttonText = ((JButton) event.getSource()).getText();
         String currentText = display.getText();
 
-        if ("C".equals(buttonText)) {
-            display.setText("");  // Clear the display
-        } else if ("=".equals(buttonText)) {
-            calculateResult();
-        } else if ("x²".equals(buttonText)) {
-            squareNumber();
-        } else if ("√".equals(buttonText)) {
-            squareRootNumber();
-        } else if ("Toggle".equals(buttonText)) {
-            toggleDisplay();
-        } else {
-            display.setText(currentText + buttonText);  // Append new button text
+        switch (buttonText) {
+            case "C" -> display.setText("");  // Clear the display
+            case "=" -> calculateResult();
+            case "x²" -> squareNumber();
+            case "√" -> squareRootNumber();
+            case "Toggle" -> toggleDisplay();
+            case null, default -> display.setText(currentText + buttonText);  // Append new button text
         }
     }
 
