@@ -1,44 +1,58 @@
 package main;
 
+import java.util.Scanner;
+
 public class QuaternaryCalculation {
 
     public static void main(String[] args) {
-        if (args.length < 3) {
-            System.out.println("Usage: <number1> <operator> <number2>");
-            return;
-        }
+        Scanner scanner = new Scanner(System.in);
 
-        String number1 = args[0];
-        String operator = args[1];
-        String number2 = args[2];
+        System.out.println("Enter first quaternary number: ");
+        String number1 = scanner.nextLine();
+
+        System.out.println("Enter operator (+, -, *, /, ^ for square, & for square root): ");
+        String operator = scanner.nextLine();
+
+        String number2 = "";
+        if (!operator.equals("^") && !operator.equals("&")) {
+            System.out.println("Enter second quaternary number: ");
+            number2 = scanner.nextLine();
+        }
 
         try {
             int base10Int1 = QuaternaryUtils.parseQuaternary(number1);
-            int base10Int2 = QuaternaryUtils.parseQuaternary(number2);
+            int base10Int2 = 0;
+            if (!number2.isEmpty()) {
+                base10Int2 = QuaternaryUtils.parseQuaternary(number2);
+            }
 
+            int result = 0;
             switch (operator) {
                 case "+":
-                    printResults(base10Int1 + base10Int2);
+                    result = base10Int1 + base10Int2;
                     break;
                 case "-":
-                    printResults(base10Int1 - base10Int2);
+                    result = base10Int1 - base10Int2;
                     break;
                 case "*":
-                    printResults(base10Int1 * base10Int2);
+                    result = base10Int1 * base10Int2;
                     break;
                 case "/":
                     if (base10Int2 == 0) throw new ArithmeticException("Divide by zero");
-                    printResults(base10Int1 / base10Int2);
+                    result = base10Int1 / base10Int2;
                     break;
                 case "^":
-                    printResults(QuaternaryUtils.square(base10Int1));
+                    result = QuaternaryUtils.square(base10Int1);
                     break;
                 case "&":
-                    printResults(QuaternaryUtils.squareRoot(base10Int1));
+                    result = QuaternaryUtils.squareRoot(base10Int1);
                     break;
                 default:
                     System.out.println("Error: Invalid operator");
+                    return;
             }
+
+            printResults(result);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
@@ -49,4 +63,3 @@ public class QuaternaryCalculation {
         System.out.println("Result (Quaternary): " + QuaternaryUtils.toQuaternary(result));
     }
 }
-
