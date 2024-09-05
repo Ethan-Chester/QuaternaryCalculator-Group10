@@ -1,12 +1,10 @@
 package test;
 
-
 import main.QuaternaryUtils;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class QuaternaryUtilsTest {
+class QuaternaryCalculatorTest {
 
     @Test
     void tenToFourShouldReturnCorrectAnswers() {
@@ -20,20 +18,21 @@ class QuaternaryUtilsTest {
     @Test
     void squareRootShouldReturnCorrectAnswer() {
         assertEquals(2, QuaternaryUtils.squareRoot(4));
+        assertEquals(10, QuaternaryUtils.squareRoot(100));  // Square root of 100 (decimal) = 10
     }
 
     @Test
     void powerShouldReturnCorrectAnswer() {
         assertEquals(4, QuaternaryUtils.power(2, 2));
-        assertEquals(1, QuaternaryUtils.power(1,1));
+        assertEquals(1, QuaternaryUtils.power(1, 1));
+        assertEquals(9, QuaternaryUtils.power(3, 2));
     }
 
     @Test
     void powerShouldReturnOneIfExponentIsZero() {
-        assertEquals(1, QuaternaryUtils.power(3,0));
-        assertEquals(1, QuaternaryUtils.power(2,0));
-        assertEquals(1, QuaternaryUtils.power(1,0));
-        assertEquals(1, QuaternaryUtils.power(0,0));
+        assertEquals(1, QuaternaryUtils.power(3, 0));
+        assertEquals(1, QuaternaryUtils.power(2, 0));
+        assertEquals(1, QuaternaryUtils.power(1, 0));
+        assertEquals(1, QuaternaryUtils.power(0, 0));
     }
 }
-
