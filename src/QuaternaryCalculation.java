@@ -8,7 +8,6 @@ public class QuaternaryCalculation {
         String operator = args[1];
         String number2 = args[2];
 
-
         int base10Int1 = 0;
         int base10Int2 = 0;
 
@@ -74,7 +73,7 @@ public class QuaternaryCalculation {
         }
     }
 
-    //add Base10 to Base4 Conversion Function
+
 
 
     public static int tentofour(int number){
