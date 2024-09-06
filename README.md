@@ -33,8 +33,3 @@ Attendees: Jadi Miller, Cyarina Amatya
 Medium: In-Person
 
 Discussion: Jadi and Cyarina implemented the test class and created tests for functions squareRoot, power, and tenToFour. They researched how to test the main function and made plans for implementation later.
-
-## README Requirements
-
-This file shall have screenshots of the project and a small manual on how to use the calculator.
-If there are additional dependencies needed, these should be explained in the readme file as well.
