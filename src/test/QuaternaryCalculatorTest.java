@@ -5,6 +5,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class QuaternaryCalculatorTest {
+
+    @Test
+    void testDivision(){
+        String number1 = "4";
+        String number2 = "2";
+        int decimalResult = QuaternaryUtils.parseQuaternary(number1) / QuaternaryUtils.parseQuaternary(number2);
+        assertEquals(2, decimalResult);
+        String quaternaryResult = QuaternaryUtils.toQuaternary(decimalResult);
+        assertEquals("2", quaternaryResult);
+    }
+    @Test
+    void testMultiplication(){
+        String number1 = "30";
+        String number2 = "22";
+        int decimalResult = QuaternaryUtils.parseQuaternary(number1) * QuaternaryUtils.parseQuaternary(number2);
+        assertEquals(120, decimalResult);
+        String quaternaryResult = QuaternaryUtils.toQuaternary(decimalResult);
+        assertEquals("1320", quaternaryResult);
+    }
     @Test
     void testAddition(){
         String number1 = "100";
@@ -22,9 +41,7 @@ class QuaternaryCalculatorTest {
         assertEquals(7,decimalResult);
         String quaternaryResult=QuaternaryUtils.toQuaternary(decimalResult);
         assertEquals("13", quaternaryResult);
-
     }
-
 
     @Test
     void tenToFourShouldReturnCorrectAnswers() {
