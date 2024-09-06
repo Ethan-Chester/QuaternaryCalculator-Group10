@@ -46,6 +46,7 @@ public class QuaternaryCalculatorGUI {
             case "x²" -> squareNumber();
             case "√" -> squareRootNumber();
             case "Toggle" -> toggleDisplay();
+            case "+", "-", "*", "/" -> display.setText(currentText + " " + buttonText + " ");
             case null, default -> display.setText(currentText + buttonText);  // Append new button text
         }
     }
@@ -96,6 +97,7 @@ public class QuaternaryCalculatorGUI {
         // Simplified evaluation logic for quaternary arithmetic operations
         String[] parts = input.split(" ");
         if (parts.length < 3) return "Error";
+
 
         int num1 = QuaternaryUtils.parseQuaternary(parts[0]);  // Convert from quaternary to decimal
         int num2 = QuaternaryUtils.parseQuaternary(parts[2]);
