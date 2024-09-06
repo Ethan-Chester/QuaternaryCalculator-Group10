@@ -1,5 +1,16 @@
 # Quaternary Calculator
 
+## Task Distribution
+[Ethan Chester] = [Backend Logic of the Calculator]
+
+[Mia Lacey] = [Building the GUI]
+
+[Jadi Miller] = [Unit Testing Math Functions & Documentation]
+
+[Cyarina Amatya] = [Unit Testing Math Functions]
+
+[Landen Finlinson] = [Unit Testing GUI]
+
 ## Meetings
 
 ### 9/2/2024, 6:00 pm to 7:00 pm
@@ -21,4 +32,3 @@ Discussion: Jadi and Cyarina implemented the test class and created tests for fu
 This file shall have screenshots of the project and a small manual on how to use the calculator.
 If there are additional dependencies needed, these should be explained in the readme file as well.
 The task will be divided into the number of team members and each team member MUST commit to the project.
-The task distribution shall be noted in the readme file of the repository in the format of [name of team member] = [task of the team member] in each line.
