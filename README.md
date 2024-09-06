@@ -27,7 +27,7 @@ Medium: Remote, Google Meet
 
 Discussion: Ethan began work on the logic of the calculator before the meeting began. He caught the three other members up on what he has implemented. After that, we split up responsibilities. Jadi and Cyarina will implement unit-tests. Ethan will complete the logic. Mia will complete the GUI. 
 
-### 9/3/2924, 2:00 pm - 4:00 pm
+### 9/3/2024, 2:00 pm - 4:00 pm
 Attendees: Jadi Miller, Cyarina Amatya
 
 Medium: In-Person
