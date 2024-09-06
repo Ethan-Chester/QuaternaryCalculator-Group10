@@ -1,9 +1,10 @@
-package main;
-
-import java.util.Scanner;
 // YOU DON'T NEED TO WRITE TEST OR USE THIS IS JUST HERE FOR MODEL. TO SHOW THAT THE QUATERNARY UTIL  IS FLEXIBLE AND WILL RUN IN TERMINAL AND FOR GUI.
 //THIS CLASS IS ONLY TERMINAL IT HAS NOTHING TO DO WITH QUATERNARY CALCULATOR GUI. Its completely separate :) it will use Quaternary Util  the same way the Quaternary Calculator Gui uses the Util.
 // This is just here for reference
+package main;
+
+import java.util.Scanner;
+
 public class QuaternaryCalculationTerminal {
 
     public static void main(String[] args) {
