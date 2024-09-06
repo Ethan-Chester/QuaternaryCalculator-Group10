@@ -34,9 +34,9 @@ Medium: In-Person
 
 Discussion: Jadi and Cyarina implemented the test class and created tests for functions squareRoot, power, and tenToFour. They researched how to test the main function and made plans for implementation later.
 
-### 9/5/2024, 7:58pm- 8:05pm
+### 9/5/2024, 7:58 pm- 8:05 pm
 Attendees: Ethan Chester, Cyarina Amatya, Mia Lacey, Landen Finlinson
 
 Medium: remote, slack huddle
 
-Discussion:  Ethan, Mia, Cyarina discussed a way to fix the calculations so the result doesn't return as an error. Ethan said he would work on it and fix the calculations in the util. and the button in the gui.Mia would look at it later. Cyarina discusses issues and we all cam eto agreement. 
+Discussion:  Ethan, Mia, Cyarina discussed a way to fix the calculations so the result doesn't return as an error. Ethan said he would work on it and fix the calculations in the util. and the button in the GUI. Mia would look at it later. Cyarina discusseD the  issues she had  and we all came to an agreement on resolving them. 
