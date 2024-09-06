@@ -44,4 +44,28 @@ public class QuaternaryUtils {
             return number * power(number, exponent - 1);
         }
     }
+    // Check if the input string is quaternary (only contains digits 0-3)
+    public static boolean isQuaternary(String input) {
+        for (char c : input.toCharArray()) {
+            if (c < '0' || c > '3') {
+                return false;  // If a digit is not in the range 0-3, it's not quaternary
+            }
+        }
+        return true;
+    }
+
+    //  This will convert input to decimal if it's quaternary, otherwise return as decimal
+    public static String toggleConversion(String input, boolean isCurrentlyQuaternary) {
+        if (isCurrentlyQuaternary && isQuaternary(input)) {
+            // Convert quaternary to decimal
+            int decimalValue = parseQuaternary(input);
+            return String.valueOf(decimalValue);
+        } else if (!isCurrentlyQuaternary) {
+            // Convert decimal to quaternary
+            int decimalValue = Integer.parseInt(input);
+            return toQuaternary(decimalValue);
+        } else {
+            return input;  // Return unchanged if the input doesn't match conditions
+        }
+    }
 }

@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 public class QuaternaryCalculatorGUI {
     private JFrame frame;
     private JTextField display;
+    private enum DisplayState { QUATERNARY, DECIMAL } // this tracks the current stage to see if its in decimal or in quaternary.
+    private DisplayState currentState = DisplayState.QUATERNARY;  //  sets Default to quaternary
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new QuaternaryCalculatorGUI().createAndShowGUI());
@@ -47,7 +50,7 @@ public class QuaternaryCalculatorGUI {
             case "√" -> squareRootNumber();
             case "Toggle" -> toggleDisplay();
             case "+", "-", "*", "/" -> display.setText(currentText + " " + buttonText + " ");
-            case null, default -> display.setText(currentText + buttonText);  // Append new button text
+            case null, default -> display.setText(currentText + buttonText);
         }
     }
 
@@ -86,10 +89,24 @@ public class QuaternaryCalculatorGUI {
     private void toggleDisplay() {
         try {
             String input = display.getText();
-            int number = QuaternaryUtils.parseQuaternary(input);  // Convert quaternary to decimal
-            display.setText(input + " / " + number);  // Display quaternary and decimal values
+            int number;
+
+            switch (currentState) {
+                case QUATERNARY -> {
+                    number = QuaternaryUtils.parseQuaternary(input);  // Converts quaternary to decimal
+                    display.setText(String.valueOf(number));
+                    currentState = DisplayState.DECIMAL;
+                }
+                case DECIMAL -> {
+                    number = Integer.parseInt(input);  // Read as decimal
+                    String quaternary = QuaternaryUtils.toQuaternary(number);  // Convert decimal to quaternary
+                    display.setText(quaternary); // Show in quaternary
+                    currentState = DisplayState.QUATERNARY;
+                }
+            }
         } catch (Exception e) {
             display.setText("Error");
+            currentState = DisplayState.QUATERNARY;  // Reset to quaternary if there's an error
         }
     }
 
