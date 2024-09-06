@@ -1,15 +1,22 @@
 # Quaternary Calculator
+## Overview
+Group 10's Quaternary Calculator was made using JDK 21. We used JUnit for testing and Swing for GUI elements.
+
+By running the QuaternaryCalculatorGUI class, a calculator will appear on the screen. You use this as a normal calculator. There are buttons for addition, subtraction, multiplication, division, squaring, and finding the square root. Use the "=" to find the answer to the inputted equation. Use the "C" button to clear your calculations. Use the "toggle" button to view your quaternary digits in decimal form.
+
+![image](https://github.com/user-attachments/assets/99b9d0f3-7816-4c55-b867-dfeaf44d2e18)
+
 
 ## Task Distribution
 [Ethan Chester] = [Backend Logic of the Calculator]
 
 [Mia Lacey] = [Building the GUI]
 
-[Jadi Miller] = [Unit Testing Math Functions & Documentation]
+[Jadi Miller] = [Testing Math Functions & README Documentation]
 
-[Cyarina Amatya] = [Unit Testing Math Functions]
+[Cyarina Amatya] = [Testing Math Functions]
 
-[Landen Finlinson] = [Unit Testing GUI]
+[Landen Finlinson] = [Testing GUI]
 
 ## Meetings
 
@@ -31,4 +38,3 @@ Discussion: Jadi and Cyarina implemented the test class and created tests for fu
 
 This file shall have screenshots of the project and a small manual on how to use the calculator.
 If there are additional dependencies needed, these should be explained in the readme file as well.
-The task will be divided into the number of team members and each team member MUST commit to the project.
